@@ -31,7 +31,6 @@ const App = () => {
 
   useEffect(() => {
     scrollToBottom();
-    console.log(messages);
   }, [messages]);
 
   const handleSend = async () => {
