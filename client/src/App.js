@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Chat from "./Chat";
 import ChatBot from "./ChatBot";
 import chatService from "./service/chat.service";
+import moment from "moment";
 
 const App = () => {
   const messagesEndRef = useRef(null);
@@ -23,13 +24,14 @@ const App = () => {
 
   useEffect(() => {
     if (response) {
-      setMessages([...messages, { msg: response, role: 0 }]);
+      setMessages([...messages, { msg: response.msg, role: 0 }]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response]);
 
   useEffect(() => {
     scrollToBottom();
+    console.log(messages);
   }, [messages]);
 
   const handleSend = async () => {
@@ -40,7 +42,7 @@ const App = () => {
 
   const getResponseMsg = async () => {
     chatService.getResponse(msg).then((res) => {
-      setResponse(res.data);
+      setResponse({ msg: res.data, time: moment().format("HH:mm:ss") });
     });
   };
 
