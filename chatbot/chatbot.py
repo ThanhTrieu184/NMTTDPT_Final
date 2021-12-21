@@ -94,7 +94,7 @@ def pred_class(text, vocab, labels):
 
 def get_response(intents_list, intents_json):
   if len(intents_list) == 0:
-    result = "Sorry! I don't understand."
+    result = "Câu hỏi này nằm ngoài phạm trù kiến thức của mình rồi"
   else:
     tag = intents_list[0]
     list_of_intents = intents_json["intents"]
