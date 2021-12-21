@@ -1,6 +1,55 @@
 {
   "intents": [
     {
+      "tag": "Chào hỏi",
+      "patterns": ["Xin chào!", "Hello", "Chào bạn", "Hi"],
+      "responses": [
+        "Chào bạn! bạn cần mình giúp gì nè!"
+      ]
+    },
+    {
+        "tag": "Hỏi sức khỏe",
+        "patterns": ["Bạn khỏe không?", "Bạn thế nào?"],
+        "responses": [
+          "Vì mình là người máy! Nên rất khỏe mạnh nha"
+        ]
+    },
+    {
+        "tag": "Hỏi bot",
+        "patterns": ["Bạn mấy tuổi?", "Bạn là ai?", "Bạn giới thiệu đi", "Bạn tên gì"],
+        "responses": [
+          "Mình là bạn của Doremon đến từ tương lai, sinh năm 2300"
+        ]
+    },
+    {
+        "tag": "Khách tự hỏi bản thân",
+        "patterns": ["Bạn biết mình là ai không?", "Tôi là ai?", "Biết mình không?"],
+        "responses": [
+          "Bạn là một người tốt bụng, trẻ đẹp đúng hông nè"
+        ]
+    },
+    {
+        "tag": "Khách tự hỏi bản thân",
+        "patterns": ["Bạn biết mình là ai không?", "Tôi là ai?", "Biết mình không?"],
+        "responses": [
+          "Bạn là một người tốt bụng, trẻ đẹp đúng hông nè"
+        ]
+    },
+    {
+        "tag": "Thích khách",
+        "patterns": ["Bạn có thích mình không?", "Bot yêu mình không?"],
+        "responses": [
+          "Mình rất thích bạn"
+        ]
+    },
+    {
+        "tag": "Tính toán",
+        "patterns": ["1+1="],
+        "responses": [
+          "Bằng 3 chứ gì, định lừa mình à"
+        ]
+    },
+    {
       "tag": "ký túc xá",
       "patterns": ["Trường mình ktx sạch không"],
       "responses": ["Quá sạch là đằng khác", "Rất sạch nha"]
