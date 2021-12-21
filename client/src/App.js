@@ -17,7 +17,7 @@ const App = () => {
   };
   const [messages, setMessages] = useState([
     {
-      msg: "Hi there! Let's talk together?",
+      msg: "Chào bạn, bạn muốn hỏi gì nè?",
       role: 0,
     },
   ]);
@@ -57,7 +57,7 @@ const App = () => {
           <div className="flex flex-col leading-tight">
             <div className="text-2xl mt-1 flex items-center">
               <span className="text-gray-700 mr-3 font-semibold">
-                Tiểu màn thầu
+                Gián điệp TDT
               </span>
               <span className="text-green-500">
                 <svg width="10" height="10">
@@ -164,7 +164,7 @@ const App = () => {
           </span>
           <input
             type="text"
-            placeholder="Bạn có gì muốn nói với Tiểu màn thầu hả?"
+            placeholder="Nói tui biết bạn đang thắc mắc gì đi"
             className="w-full focus:outline-none focus:placeholder-gray-400 text-gray-600 placeholder-gray-600 pl-12 bg-gray-200 rounded-full py-3"
             onChange={(e) => setMsg(e.target.value)}
             value={msg}
