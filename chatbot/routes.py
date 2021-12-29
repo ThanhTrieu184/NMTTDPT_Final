@@ -1,11 +1,8 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, request
 from flask_cors import cross_origin
-import os
 import chatbot
 
 app = Flask(__name__)
-
-os.system('python chatbot.py')
 
 @app.route("/api/chatbot")
 # function for the bot response
