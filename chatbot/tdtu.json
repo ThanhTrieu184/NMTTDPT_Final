@@ -51,13 +51,13 @@
     },
     {
       "tag": "ký túc xá",
-      "patterns": ["Trường mình ktx sạch không"],
-      "responses": ["Quá sạch là đằng khác", "Rất sạch nha"]
+      "patterns": ["Trường mình ktx sạch không", "Trường mình ký túc xá sạch không", "ký túc xá trường mình như thế nào"],
+      "responses": ["Rất sạch nha"]
     },
     {
       "tag": "học ngành sư phạm",
-      "patterns": ["Trường mình có ngành nào liên quan về sư phạm không"],
-      "responses": ["Có trường mình có khoa chuyên về này"]
+      "patterns": [ "trường mình có ngành sư phạm không", "trường mình có dạy về sư phạm không ạ"],
+      "responses": ["Có trường mình có khoa chuyên về sư phạm nha"]
     },
     {
       "tag": "chỗ ở hiện nay",
@@ -82,7 +82,7 @@
       "patterns": [
         "Bạn cho mình hỏi về học phí của từng học kì với ạ ?",
         "Học phí ở từng học kì có khác nhau không?",
-        "học phí một học kì dao động trong khoảng bao nhiêu câu nhỉ?"
+        "học phí một học kì khoảng bao nhiêu?"
       ],
       "responses": [
         "Ở học kì đầu tiên thì khoảng 10 triệu đồng, học kì tiếp theo cũng khoảng 10 triệu, từ năm 2 trở đi thì tự chọn môn nên học phí nhiều hay ít liên quan tới đăng ký môn nhiều hay ít"
@@ -144,9 +144,11 @@
     {
       "tag": "học phí của trường",
       "patterns": [
-        "học phí tại trường của bạn có đắt không?",
+        "học phí tại trường mình có đắt không?",
         "Học phí trường mình thế nào?",
-        "Học phí tại trường giao động khoản bao nhiêu?"
+        "Học phí tại trường giao động khoản bao nhiêu?",
+        "Học phí có đắt không",
+        "học phí như thế nào"
       ],
       "responses": [
         "học phí tại trường mình dao động từ 10 triệu tới 20 triệu mỗi học kì"
@@ -355,9 +357,9 @@
     {
       "tag": "Có ký túc xá",
       "patterns": [
-        "Trường có kí túc xá không thế",
+        "Trường có ký túc xá không thế",
         "Trường mình có ktx không",
-        "Trường mình có kí túc xá không",
+        "Trường mình có ký túc xá không",
         "Có mấy tòa ký túc xá",
         "Trong trường có ký túc xá cho sinh viên không"
       ],
@@ -366,7 +368,7 @@
     {
       "tag": "Giá tiền ký túc xá",
       "patterns": [
-        "kí túc xá thu bao nhiêu tiền 1 tháng thế ?",
+        "ký túc xá thu bao nhiêu tiền 1 tháng thế ?",
         "Giá phòng ký túc xá có đắt không?"
       ],
       "responses": [
@@ -399,7 +401,7 @@
       "tag": "Học phí khoa công nghệ thông tin",
       "patterns": [
         "Cho em hỏi về học phí của ngành Công Nghệ Thông Tin trong trường mình với ạ?",
-        "Học phí ngành CNNT có đắt không?"
+        "Học phí ngành CNTT có đắt không?"
       ],
       "responses": [
         "Tùy vào số tín chỉ một học kì em đăng kí mà học phí cao hay thấp, mức học phí trung bình 1 học kì là 12 triệu"
@@ -434,7 +436,7 @@
     {
       "tag": "Tìm trọ",
       "patterns": [
-        "Chị sắp chuyển ra kí túc xá, không biết em có biết chỗ phòng trọ nào ok không?",
+        "Chị sắp chuyển ra ký túc xá, không biết em có biết chỗ phòng trọ nào ok không?",
         "Có trọ nào thích hợp mà gần trường không?",
         "Gần trường có trọ nào ổn không?",
         "Bạn có thể tư vấn trọ gần trường không?"
@@ -527,7 +529,7 @@
     {
       "tag": "Đánh giá ký túc xá",
       "patterns": [
-        "kí túc xá của trường được đánh giá như thế nào?",
+        "ký túc xá của trường được đánh giá như thế nào?",
         "Số sao của ký túc xá là bao nhiêu?",
         "Nghe nói ký túc trường mình là 5 sao phải không?"
       ],
@@ -626,13 +628,13 @@
       "context_set": ""
     },
     {
-      "tag": "kí túc xá riêng",
+      "tag": "ký túc xá riêng",
       "patterns": [
-        "em muốn hỏi trường mình có kí túc xá riêng không",
-        "Trường có kí túc xá không ạ",
-        "em nghe bảo trường mình có kí túc xá, không biết có đúng không ạ"
+        "em muốn hỏi trường mình có ký túc xá riêng không",
+        "Trường có ký túc xá không ạ",
+        "em nghe bảo trường mình có ký túc xá, không biết có đúng không ạ"
       ],
-      "responses": ["trường có 4 tòa kí túc xá riêng em nhé"]
+      "responses": ["trường có 4 tòa ký túc xá riêng em nhé"]
     },
     {
       "tag": "chất lượng phòng học",
@@ -840,7 +842,7 @@
     },
     {
       "tag": "số lượng nhà giữ xe",
-      "patterns": ["Trường có mấy nhà giữ xe ạ"],
+      "patterns": ["Trường có mấy nhà xe", "Trường có mấy chỗ gửi xe", "Trường có mấy bãi đỗ xe ạ"],
       "responses": [
         "Trường có 4 chỗ gửi xe cho các bạn có thể gửi , giá vé gửi xe là 2 nghìn vnd"
       ]
@@ -1116,7 +1118,7 @@
     },
     {
         "tag": "Số dư tài khoản",
-        "patterns": ["Làm sao để em biếtcòn bao nhiêu tiền trong tài khoản?", "Cách xem số dư trong tài khoảng thư viện", "Số dư tài khoản xem ở đâu?"],
+        "patterns": ["Làm sao để em biết còn bao nhiêu tiền trong tài khoản?", "Cách xem số dư trong tài khoảng thư viện", "Số dư tài khoản xem ở đâu?"],
         "responses": ["Em vào trang hệ thống thông tin, vào mục học phí để xem nha em"]
     },
     {
@@ -1198,7 +1200,7 @@
     {
         "tag": "Thư viện thế nào",
         "patterns": [
-            "Thư viện trường mình như thế nào ?", "Cho em cảm nhận về thư viện?", "Thư viện rộng không?"
+            "Thư viện trường mình như thế nào ?", "Cho em cảm nhận về thư viện?", "Thư viện rộng không?", "nghe bảo thư viện trường mình đẹp lắm có đúng không"
         ],
         "responses": [
             "Thư viện trường mình rất rộng và hiện đại"
@@ -1207,7 +1209,7 @@
     {
         "tag": "Thư viện ở đâu",
         "patterns": [
-            "Thư viên nằm ở khu nào vậy?", "Thư viện ở đâu ạ?", "Chỉ giúp em chỗ thư viện với?"
+            "Thư viện nằm ở khu nào vậy?", "Thư viện ở đâu ạ?", "Chỉ giúp em chỗ thư viện với?"
         ],
         "responses": [
             "Nằm ở khu hành chính, tòa nhà màu cam nè"
@@ -1216,7 +1218,7 @@
     {
         "tag": "Chỗ gửi xe",
         "patterns": [
-            "nếu muốn gửi xe thì trường có chỗ gửi xe không ạ?", "Trường có chỗ gửi xe không?"
+            "nếu muốn gửi xe thì trường có chỗ gửi xe không ạ?", "Trường có chỗ gửi xe không?", "Trường có bãi đỗ xe không?", "Trường có nhà xe không?"
         ],
         "responses": [
             "tất nhiên là có rồi, không chỉ có mà có tận 3 hầm gửi xe luôn"
@@ -1289,7 +1291,7 @@
         ]
     },
     {
-        "tag": "Khoa cntt trai đjep",
+        "tag": "Khoa cntt trai đẹp",
         "patterns": [
             "Khoa mình có nhiều trai đẹp không?", "Khoa công nghệ thông tin có trai không?", "Trai công nghệ thông tin thế nào?"
         ],

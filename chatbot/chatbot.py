@@ -4,10 +4,9 @@ import random
 from underthesea import word_tokenize
 import nltk
 import numpy as np
-from nltk.stem import WordNetLemmatizer
 import tensorflow as tf
 from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.layers import Dense
 nltk.download("punkt")
 nltk.download("wordnet")
 
@@ -21,7 +20,7 @@ data_y = []
 
 for intent in data["intents"]:
     for pattern in intent["patterns"]:
-        tokens = nltk.word_tokenize(pattern)
+        tokens = word_tokenize(pattern)
         words.extend(tokens)
         data_X.append(pattern)
         data_y.append(intent["tag"]),
@@ -29,9 +28,8 @@ for intent in data["intents"]:
     if intent["tag"] not in classes:
         classes.append(intent["tag"])
 
-lemmatizer = WordNetLemmatizer()
 
-words = [lemmatizer.lemmatize(word.lower()) for word in words if word not in string.punctuation]
+words = [word.lower() for word in words if word not in string.punctuation]
 words = sorted(set(words))
 classes = sorted(set(classes))
 
@@ -39,7 +37,7 @@ training = []
 out_empty = [0] * len(classes)
 for idx, doc in enumerate(data_X):
     bow = []
-    text = lemmatizer.lemmatize(doc.lower())
+    text = doc.lower()
     for word in words:
         bow.append(1) if word in text else bow.append(0)
     output_row = list(out_empty)
@@ -54,9 +52,7 @@ train_Y = np.array(list(training[:, 1]))
 #The Neural Network Model
 model = Sequential()
 model.add(Dense(128, input_shape=(len(train_X[0]),), activation="relu"))
-model.add(Dropout(0.5))
 model.add(Dense(64, activation="relu"))
-model.add(Dropout(0.5))
 model.add(Dense(len(train_Y[0]), activation = "softmax"))
 adam = tf.keras.optimizers.Adam(learning_rate=0.01, decay=1e-6)
 model.compile(loss='categorical_crossentropy',
@@ -68,8 +64,8 @@ model.fit(x=train_X, y=train_Y, epochs=150, verbose=1)
 #Preprocessing the Input
 
 def clean_text(text):
-  tokens = nltk.word_tokenize(text)
-  tokens = [lemmatizer.lemmatize(word) for word in tokens]
+  doc = text.lower()
+  tokens = word_tokenize(doc)
   return tokens
 
 def bag_of_words(text, vocab):
