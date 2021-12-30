@@ -20,7 +20,7 @@ data_y = []
 
 for intent in data["intents"]:
     for pattern in intent["patterns"]:
-        tokens = word_tokenize(pattern)
+        tokens = nltk.word_tokenize(pattern)
         words.extend(tokens)
         data_X.append(pattern)
         data_y.append(intent["tag"]),
@@ -65,7 +65,7 @@ model.fit(x=train_X, y=train_Y, epochs=150, verbose=1)
 
 def clean_text(text):
   doc = text.lower()
-  tokens = word_tokenize(doc)
+  tokens = nltk.word_tokenize(doc)
   return tokens
 
 def bag_of_words(text, vocab):
